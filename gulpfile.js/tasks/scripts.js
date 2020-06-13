@@ -10,7 +10,7 @@ const gulpIf = require('gulp-if');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-const uglify = require('gulp-uglify');
+const terser = require('gulp-terser');
 
 const isDev = !process.env.NODE_ENV;
 
@@ -19,7 +19,7 @@ task('scripts', function () {
   return src(`${settings.paths.src.scripts}**/*.js`)
     .pipe(gulpIf(isDev, sourcemaps.init()))
     .pipe(concat('index.js'))
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(gulpIf(isDev, sourcemaps.write()))
     .pipe(rename({
       suffix: '.min'
