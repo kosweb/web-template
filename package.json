@@ -1,0 +1,60 @@
+{
+  "name": "web-template",
+  "version": "1.0.0",
+  "description": "template for quick start",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "browser-sync": "^2.26.7",
+    "cross-env": "^7.0.2",
+    "css-mqpacker": "^7.0.0",
+    "del": "^5.1.0",
+    "eslint": "^7.2.0",
+    "gh-pages": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-wait": "0.0.2",
+    "gulp-zip": "^5.0.1",
+    "imagemin-jpegoptim": "^7.0.0",
+    "imagemin-webp": "^6.0.0",
+    "require-dir": "^1.2.0",
+    "stylelint": "^13.6.0",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "start": "gulp",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "deploy": "npm run build && gh-pages -d build",
+    "dist": "npm run build && gulp zip",
+    "stylelint": "stylelint \"source/styles/**/*.scss\" --syntax sass",
+    "eslint": "eslint \"source/js/**/*.js\"",
+    "test": "npm run stylelint && npm run eslint"
+  },
+  "author": "KosWeb <kosweb@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kosweb/web-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kosweb/web-template/issues"
+  },
+  "homepage": "https://github.com/kosweb/web-template#readme"
+}
