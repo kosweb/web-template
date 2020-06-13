@@ -1,5 +1,7 @@
 # README
 
+`git clone https://github.com/kosweb/web-template.git && cd web-template`
+
 `npm install` - установка зависимостей.
 
 `npm start` - сборка проекта в режиме разработки и запуск локального сервера.
